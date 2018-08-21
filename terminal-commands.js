@@ -9,3 +9,13 @@ module.exports.ls = () => {
     console.log(filesToString);
   });
 };
+
+module.exports.touch = (name, text, type) => {
+  fs.writeFileSync(name, text, type);
+  console.log("File " + name + " made to include " + text);
+}
+
+module.exports.mkdir = (path) => {
+  fs.mkdir(path);
+  console.log("Directory made at: " + path);
+};
